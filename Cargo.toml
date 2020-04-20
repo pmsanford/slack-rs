@@ -9,7 +9,7 @@ license = "Apache-2.0"
 edition = "2018"
 
 [dependencies]
-slack_api = "0.22.0"
+slack_api = { git = "https://github.com/pmsanford/slack-rs-api.git" }
 serde = "1.0.0"
 serde_json = "1.0.0"
 serde_derive = "1.0.0"

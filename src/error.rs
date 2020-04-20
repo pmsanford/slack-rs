@@ -96,17 +96,6 @@ impl fmt::Display for Error {
 }
 
 impl error::Error for Error {
-    fn description(&self) -> &str {
-        match *self {
-            Error::Http(ref e) => e.description(),
-            Error::WebSocket(ref e) => e.description(),
-            Error::Utf8(ref e) => e.description(),
-            Error::Url(ref e) => e.description(),
-            Error::Json(ref e) => e.description(),
-            Error::Api(ref st) | Error::Internal(ref st) => st,
-        }
-    }
-
     fn cause(&self) -> Option<&dyn error::Error> {
         match *self {
             Error::Http(ref e) => Some(e),
