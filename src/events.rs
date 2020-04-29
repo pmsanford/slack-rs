@@ -285,6 +285,8 @@ pub enum Event {
         thread_ts: Option<String>,
         title: Option<String>,
     },
+    /// Represents a goodbye event
+    Goodbye,
 }
 
 /// Represents a confirmation of a message sent
